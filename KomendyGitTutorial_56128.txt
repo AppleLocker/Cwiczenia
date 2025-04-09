@@ -1,0 +1,98 @@
+level intro 1
+git commit
+git commit
+
+level intro 2
+git branch bugifx
+git ckeckout bugifx
+
+level intro 3
+git branch bugfix
+git checkout bugifx
+git commit
+git checkout main
+git commit
+git merge bugifx
+
+level intro 4
+git branch bugfix
+git checkout bugfix
+git commit
+git checkout main
+git commit
+git checkout bugfix
+git merge bugfix
+
+level rampup 1
+git checkout C4
+
+level rampup 2
+git checkout C4
+git checkout HEAD
+
+level rampup 3
+git checkout HEAD~1
+git branch -f bugFix C0
+git branch -f main C6
+
+level rampup 4
+git reset local~1
+git checkout pushed
+git revert pushed
+
+level move 1
+git cherry-pick C3 C4 C7
+
+level move 2
+git rebase -i HEAD~4
+
+level mixed 1
+git rebase -i HEAD~3
+git cherry-pick C4 C1
+undo
+git branch -f main bugFix
+
+level mixed 2
+git rebase -i HEAD~2
+git commit --amend
+git rebase -i HEAD~2
+git branch -f main caption
+
+level mixed 3
+git checkout main
+git cherry-pick C2
+git commit --amend
+git cherry-pick C3
+
+level mixed 4
+git checkout C2
+git tag v1 C2
+git checkout C1
+git tag v0 C1
+git checkout C2
+
+level mixed 5
+git describe main
+git describe C4
+git describe C7
+Komendy kończące poziom - git checkout bugFix | git commit
+
+level advanced 1
+git rebase main bugFix
+git rebase bugFix side
+git rebase side another
+git rebase another main
+
+level advanced 2
+git checkout main~^2~1
+git branch bugWork
+git checkout main
+
+level advanced 3
+git branch -f one C4
+git rebase -i one~3
+git branch -f two C5
+git checkout two
+git rebase -i two~4
+git branch -f three C2
+
